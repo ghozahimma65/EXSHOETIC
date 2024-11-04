@@ -1,0 +1,181 @@
+/* Variabel Warna */
+:root {
+    --primary-color: #f0c14b;
+    --secondary-color: #e2a823;
+    --dark-color: #333;
+    --light-color: #f9f9f9;
+    --text-color: #666;
+    --white-color: #fff;
+}
+
+/* Body */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--dark-color);
+    line-height: 1.6;
+    background-color: var(--light-color);
+    margin: 0;
+}
+
+/* Location Hero Section */
+.location-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.location-hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.location-hero p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* Store Locations Section */
+.store-locations {
+    padding: 60px 20px;
+    background-color: var(--light-color);
+    text-align: center;
+}
+
+.section-title h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: var(--dark-color);
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+}
+
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Tambahkan Bingkai pada Kartu Lokasi */
+.location-card {
+    background-color: var(--white-color);
+    border: 4px solid var(--dark-color); /* Warna bingkai sesuai tema */
+    border-radius: 8px; /* Sudut melengkung pada bingkai */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.location-image img {
+    width: 100%;
+    border-bottom: 4px solid var(--primary-color);
+}
+
+.location-info {
+    padding: 20px;
+}
+
+.location-info h3 {
+    color: var(--dark-color);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.location-info p {
+    color: var(--text-color);
+    margin: 5px 0;
+}
+
+.location-features span {
+    display: inline-block;
+    margin: 5px;
+    color: var(--secondary-color);
+}
+
+.btn-map {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-map:hover {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    padding: 40px 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+}
+
+.footer-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.footer-section a {
+    display: block;
+    color: var(--white-color);
+    text-decoration: none;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--secondary-color);
+}
+
+.footer-section p {
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+footer .copyright {
+    text-align: center;
+    margin-top: 20px;
+    color: #ccc;
+    font-size: 0.9em;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .locations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        flex: 1 1 100%;
+    }
+}

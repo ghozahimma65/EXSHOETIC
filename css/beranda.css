@@ -1,0 +1,232 @@
+/* Define color variables */
+:root {
+    --primary-color: #f0c14b;
+    --secondary-color: #e2a823;
+    --dark-color: #333;
+    --light-color: #f9f9f9;
+    --text-color: #666;
+    --white-color: #fff;
+}
+
+/* Body Style */
+body {
+    font-family: 'Roboto', sans-serif; /* Change to a modern font */
+    color: var(--dark-color);
+    line-height: 1.6;
+    background-color: var(--light-color);
+    margin: 0;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../img/BackgroundBeranda.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* This can be adjusted if the content is too tall */
+    color: #fff;
+    position: relative; /* For overlay functionality */
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative; /* Keep content above overlay */
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 100px; /* Increase this padding to ensure button is visible */
+}
+
+/* Button Styling */
+.hero .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #f0c14b;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px; /* Rounded corners for a modern look */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 2; /* Ensure button is on top */
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Add box-shadow transition */
+}
+
+.hero .btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow effect on hover */
+}
+
+/* Responsiveness for Hero Text */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2em;
+    }
+
+    .hero-text p {
+        font-size: 1em;
+    }
+
+    .hero .btn {
+        padding: 8px 16px;
+    }
+}
+
+/* Services Section */
+.services {
+    padding: 60px 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.section-title h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: var(--dark-color);
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust min width for better responsiveness */
+    gap: 20px;
+}
+
+.service-card {
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.service-card i {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.service-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.service-card p {
+    color: var(--text-color);
+}
+
+.service-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    padding: 40px 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+}
+
+.footer-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.footer-section a {
+    display: block;
+    color: var(--white-color);
+    text-decoration: none;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--secondary-color);
+}
+
+.footer-section p {
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+.footer-section .social-icons a {
+    display: inline-block;
+    margin: 0 5px;
+    color: var(--primary-color);
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.footer-section .social-icons a:hover {
+    color: var(--secondary-color);
+}
+
+footer .copyright {
+    text-align: center;
+    margin-top: 20px;
+    color: #ccc;
+    font-size: 0.9em;
+}
+
+/* Responsiveness for Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        flex: 1 1 100%;
+    }
+}
+
+/* Utility Styles for Sections */
+.section-title,
+.footer-section,
+.services-grid,
+.hero-content {
+    margin-bottom: 20px;
+}
